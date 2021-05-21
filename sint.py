@@ -18,21 +18,12 @@ def transform2(string,lista):
         x+=1
     return listanova
 
-def epsilon_sub(lista):
-    tmp = []
-    for i in lista:
-        if 'ε' in i:
-            tmp.append('')
-        else:
-            tmp.append(i)
-    return lista
-
 def First(grammar):
     first = {i: set() for i in grammar.nonterminals}
     first.update((i, {i}) for i in grammar.terminals)
 
     lista = sorted((list(grammar.terminals)+list(grammar.nonterminals)), key=len, reverse=True)
-    rule = tuple([(i, epsilon_sub(transform2(j, lista))) for i, j in grammar.rules])
+    rule = tuple([(i, transform2(j, lista)) for i, j in grammar.rules])
 
     epsilon = {'ε'}
 

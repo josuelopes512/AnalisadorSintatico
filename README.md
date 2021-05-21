@@ -12,23 +12,24 @@
 	primeiro simbolo terminal de uma regra gramatical que começam qualquer seqüência derivável.
 	Depois foi feita uma tabela representativa dos primeiros dos simbolos não terminais
 
-<img src=https://i.imgur.com/hmn3t5G.png/>
+<img src=https://i.imgur.com/hnWSn6N.png/>
 
 
 ### Dada a gramática G
 
 	G = (Vn, Vt, P, S)
-	Vn = E, E', T, T', F
+	Vn = E, E', T, T', F, H
 	Vt = id, + , ε , * , (, )
 	ε = Épsilon
 
 	E -> TE'
 	E' -> +TE' | ε
 	T -> FT'
+	H -> E'T
 	T' -> *FT' | ε
 	F -> (E) | id
 
-<img src=https://i.imgur.com/CS2LT8y.png/>
+<img src=https://i.imgur.com/Ag5t3PA.png/>
 
 
 	OBS: Esse Projeto Foi Implementado utilizando Python e Desenvolvido no VSCODE

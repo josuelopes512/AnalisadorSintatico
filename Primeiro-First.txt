@@ -1,0 +1,12 @@
+Epsilon = {'ε'}
+Primeiro(E) = {'id', '('}
+Primeiro(T') = {'*', 'ε'}
+Primeiro(E') = {'+', 'ε'}
+Primeiro(F) = {'id', '('}
+Primeiro(T) = {'id', '('}
+Primeiro(id) = {'id'}
+Primeiro(+) = {'+'}
+Primeiro(*) = {'*'}
+Primeiro(() = {'('}
+Primeiro()) = {')'}
+Primeiro(ε) = {'ε'}

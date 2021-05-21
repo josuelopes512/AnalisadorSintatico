@@ -1,5 +1,6 @@
 E -> TE'
 E' -> +TE' | ε
 T -> FT'
+H -> E'T
 T' -> *FT' | ε
 F -> (E) | id

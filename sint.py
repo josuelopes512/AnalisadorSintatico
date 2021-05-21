@@ -18,14 +18,23 @@ def transform2(string,lista):
         x+=1
     return listanova
 
+def epsilon_sub(lista):
+    tmp = []
+    for i in lista:
+        if 'ε' in i:
+            tmp.append('')
+        else:
+            tmp.append(i)
+    return lista
+
 def First(grammar):
     first = {i: set() for i in grammar.nonterminals}
     first.update((i, {i}) for i in grammar.terminals)
 
     lista = sorted((list(grammar.terminals)+list(grammar.nonterminals)), key=len, reverse=True)
-    rule = tuple([(i, transform2(j, lista)) for i, j in grammar.rules])
+    rule = tuple([(i, epsilon_sub(transform2(j, lista))) for i, j in grammar.rules])
 
-    epsilon = set()
+    epsilon = {'ε'}
 
     while True:
         updated = False
@@ -40,7 +49,7 @@ def First(grammar):
         if not updated:
             epsilon = {'ε'}
             for i in first:
-                if first[i] == set():
+                if first[i] == '':
                     first[i] = {'ε'} 
             return first, epsilon
 
@@ -96,8 +105,6 @@ def main():
             a = "Primeiro({}) = {}".format(i, first[i])
             file.write(a + '\n')
             print(a)
-            # file.write("Primeiro(%s): " % i)
-            # file.write("%s\n" % first[i])
         
         
 main()

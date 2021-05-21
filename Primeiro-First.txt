@@ -1,12 +1,13 @@
 Epsilon = {'ε'}
-Primeiro(E) = {'(', 'id'}
+Primeiro(E') = {'+', 'ε'}
 Primeiro(T) = {'(', 'id'}
-Primeiro(E') = {'ε', '+'}
+Primeiro(H) = {'+', '(', 'ε', 'id'}
 Primeiro(T') = {'ε', '*'}
 Primeiro(F) = {'(', 'id'}
+Primeiro(E) = {'(', 'id'}
 Primeiro(() = {'('}
-Primeiro(+) = {'+'}
 Primeiro(*) = {'*'}
-Primeiro()) = {')'}
 Primeiro(ε) = {'ε'}
 Primeiro(id) = {'id'}
+Primeiro(+) = {'+'}
+Primeiro()) = {')'}

@@ -7,9 +7,9 @@
 	
 	Primeiro foi definido 2 vetores separando dos simbolos terminais do não terminais
 	Depois Foi Definido um Vetor para armazenar a Gramatica, separando as regras gramaticais
-	Depois baseado nos vetores representando as regras gramaticais de reprodução, os simbolos terminais e não terminais
-	foi implementado o algoritmo first, que detecta o primeiro simbolo terminal de uma regra gramatical que começam
-	qualquer seqüência derivável.
+	Depois baseado nos vetores representando as regras gramaticais de reprodução, 
+	os simbolos terminais e não terminais foi implementado o algoritmo first, que detecta o 
+	primeiro simbolo terminal de uma regra gramatical que começam qualquer seqüência derivável.
 	Depois foi feita uma tabela representativa dos primeiros dos simbolos não terminais
 
 <img src=https://i.imgur.com/hmn3t5G.png/>

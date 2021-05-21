@@ -38,10 +38,6 @@ def First(grammar):
                     updated |= union(epsilon, {nt})
         
         if not updated:
-            epsilon = {'ε'}
-            for i in first:
-                if first[i] == '':
-                    first[i] = {'ε'} 
             return first, epsilon
 
 def union(first, begins):

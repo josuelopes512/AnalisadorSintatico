@@ -38,6 +38,7 @@ def First(grammar):
                     updated |= union(epsilon, {nt})
         
         if not updated:
+            epsilon = {'ε'}
             return first, epsilon
 
 def union(first, begins):
@@ -95,3 +96,10 @@ def main():
         
         
 main()
+
+
+# S -> AB
+# A -> aA | a 
+# A -> ε
+# B -> bB | c 
+# B -> ε

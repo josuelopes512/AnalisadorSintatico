@@ -20,6 +20,7 @@
 	G = (Vn, Vt, P, S)
 	Vn = E, E', T, T', F
 	Vt = id, + , ε , * , (, )
+	ε = Épsilon
 
 	E -> TE'
 	E' -> +TE' | ε

@@ -28,3 +28,8 @@
 	F -> (E) | id
 
 <img src=https://i.imgur.com/CS2LT8y.png/>
+
+
+	OBS: Esse Projeto Foi Implementado utilizando Python e Desenvolvido no VSCODE
+	para executar o projeto não abra o projeto em subpasta. 
+	Abra o projeto "Abrir Pasta" no vscode e selecione a pasta "AnalisadorSintatico-master"

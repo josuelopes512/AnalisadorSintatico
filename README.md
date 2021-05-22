@@ -35,3 +35,4 @@
 	OBS: Esse Projeto Foi Implementado utilizando Python e Desenvolvido no VSCODE
 	para executar o projeto não abra o projeto em subpasta. 
 	Abra o projeto "Abrir Pasta" no vscode e selecione a pasta "AnalisadorSintatico-master"
+	Execute no Windows 10 se houver algum problema do tipo SyntaxError

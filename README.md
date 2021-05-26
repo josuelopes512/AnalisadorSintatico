@@ -12,27 +12,26 @@
 	primeiro simbolo terminal de uma regra gramatical que começam qualquer seqüência derivável.
 	Depois foi feita uma tabela representativa dos primeiros dos simbolos não terminais
 
-<img src=https://i.imgur.com/hnWSn6N.png/>
+<img src=https://i.imgur.com/hmn3t5G.png/>
 
 
 ### Dada a gramática G
 
 	G = (Vn, Vt, P, S)
-	Vn = E, E', T, T', F, H
+	Vn = E, E', T, T', F
 	Vt = id, + , ε , * , (, )
 	ε = Épsilon
 
 	E -> TE'
 	E' -> +TE' | ε
 	T -> FT'
-	H -> E'T
 	T' -> *FT' | ε
 	F -> (E) | id
 
-<img src=https://i.imgur.com/Ag5t3PA.png/>
+<img src=https://i.imgur.com/CS2LT8y.png/>
 
 
 	OBS: Esse Projeto Foi Implementado utilizando Python e Desenvolvido no VSCODE
 	para executar o projeto não abra o projeto em subpasta. 
 	Abra o projeto "Abrir Pasta" no vscode e selecione a pasta "AnalisadorSintatico-master"
-	Execute no Windows 10 se houver algum problema do tipo SyntaxError
+	Para executar python3 sint.py

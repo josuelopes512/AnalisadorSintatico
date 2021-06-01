@@ -1,4 +1,4 @@
-# Analisador Sintático 
+# Analisador Sintático - Parte 1
 	
 ## Aplicação do Algoritmo First e Follow
 

@@ -14,6 +14,8 @@
 
 <img src=https://i.imgur.com/hmn3t5G.png/>
 
+<img src=https://i.imgur.com/B5lxGbc.png/>
+
 
 ### Dada a gramática G
 

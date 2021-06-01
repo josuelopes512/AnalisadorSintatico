@@ -1,20 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
-
-def tr3(string, lista): # conversão e filtragem
-    stringnova=""
-    tam=len(string)
-    x=0
-    while x<tam:
-        if(x<tam-1 and str(string[x]) + str(string[x+1]) in lista):
-            stringnova+= str(" ")+str(string[x])+str(string[x+1])+str(" ")
-            x+=1
-        elif(str(string[x]) in lista):
-            stringnova+=" "+str(string[x])+" "
-        else:
-            stringnova+=str(string[x])
-        x+=1
-    return list(filter(lambda x:x!="",stringnova.split(" ")))
+from funcoes import tr3
 
 class Grammar:
     def __init__(self, rules):
@@ -24,13 +10,6 @@ class Grammar:
     def _parse(self, rule):
         return tuple(rule.replace(' ', '').split('->'))
         
-    # def __getitem__(self, nonterminal):
-    #     yield from [rule for rule in self.rules if rule[0] == nonterminal]
-        
-    # @staticmethod 
-    # def is_nonterminal(symbol):
-    #     return symbol.isalpha() and symbol.isupper()
-
     @property
     def nonterminals(self):
         return set([nt for nt, _ in self.rules])

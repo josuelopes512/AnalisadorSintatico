@@ -1,4 +1,6 @@
-# Analisador Sintático
+# Analisador Sintático 
+	
+## Aplicação do Algoritmo First e Follow
 
 	O analisador sintático preditivo de descendência recursiva é um dos mais simples para se
 	implementar à mão. Ele usa funções recursivas associadas a gramática. Tais funções são: Cabeça,

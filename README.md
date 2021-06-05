@@ -20,7 +20,8 @@
 
 
 ### Dada a gramática G
-
+	# gramatica 1, arquivo a.txt
+	
 	G = (Vn, Vt, P, S)
 	Vn = E, E', T, T', F
 	Vt = id, + , ε , * , (, )

@@ -14,9 +14,7 @@
 	primeiro simbolo terminal de uma regra gramatical que começam qualquer seqüência derivável.
 	Depois foi feita uma tabela representativa dos primeiros dos simbolos não terminais
 
-<img src=https://i.imgur.com/hmn3t5G.png/>
 
-<img src=https://i.imgur.com/B5lxGbc.png/>
 
 
 ### Dada a gramática G
@@ -35,6 +33,7 @@
 
 <img src=https://i.imgur.com/CS2LT8y.png/>
 
+<img src=https://i.imgur.com/B5lxGbc.png/>
 
 	OBS: Esse Projeto Foi Implementado utilizando Python e Desenvolvido no VSCODE
 	para executar o projeto não abra o projeto em subpasta. 

@@ -3,8 +3,15 @@
 
 import re
 from pathlib import Path
+from os import system, name
 from grammar import Grammar
 from funcoes import FirstAndFollow
+
+def clear():
+    if name == 'nt':
+        system('cls')
+    else:
+        system('clear')
 
 def tratarArq(lista): # trata lista e converte
     lista = " ".join(lista.split())
@@ -72,12 +79,15 @@ def visualizar_saida():
         op = input('1 - Visualizar First\n2 - Visualizar Follow\n3 - Visualizar First e Follow\n\nDigite a Opção: ')
         print('\n---------------------------------------------------------------------\n')
         if op == '1':
+            clear()
             printArquivo('output/First.txt')
             X = False
         if op == '2':
+            clear()
             printArquivo('output/Follow.txt')
             X = False
         if op == '3':
+            clear()
             printArquivo('output/First.txt')
             print('-----------------------------------------------------------------\n')
             printArquivo('output/Follow.txt')
@@ -88,12 +98,49 @@ def visualizar_gr(lista):
     for i in lista:
         print(i)
 
+
+def comentarios_sobre_gramaticas(escolha):
+    if escolha == 1:
+        print("Sobre a Gramatica a.txt, é necessário (((comentar))) \na penuntima linha da Função 'terminals' \nLocalizada em grammar.py Dentro da Classe Grammar \npara um bom funcionamento do código")
+    if escolha == 2:
+        print("Sobre a Gramatica b.txt, é necessário (((descomentar))) \na penuntima linha da Função 'terminals' \nLocalizada em grammar.py Dentro da Classe Grammar \npara um bom funcionamento do código")
+    if escolha == 3:
+        print("Sobre a Gramatica c.txt, é necessário (((descomentar))) \na penuntima linha da Função 'terminals' \nLocalizada em grammar.py Dentro da Classe Grammar \npara um bom funcionamento do código")
+    if escolha == 4:
+        print("Sobre a Gramatica d.txt, é necessário (((descomentar))) \na penuntima linha da Função 'terminals' \nLocalizada em grammar.py Dentro da Classe Grammar \npara um bom funcionamento do código")
+    if escolha == 5:
+        print("Sobre a Gramatica e.txt, é necessário (((descomentar))) \na penuntima linha da Função 'terminals' \nLocalizada em grammar.py Dentro da Classe Grammar \npara um bom funcionamento do código")
+    if escolha == 6:
+        print("Sobre a Gramatica f.txt, é necessário (((descomentar))) \na penuntima linha da Função 'terminals' \nLocalizada em grammar.py Dentro da Classe Grammar \npara um bom funcionamento do código")
+    if escolha == 7:
+        print("Sobre a Gramatica g.txt, é necessário (((descomentar))) \na penuntima linha da Função 'terminals' \nLocalizada em grammar.py Dentro da Classe Grammar \npara um bom funcionamento do código")
+
+
 def main():
     dir = "gramaticas"
 
     gramatica = [dir+'/a.txt', dir+'/b.txt', dir+'/c.txt', dir+'/d.txt', dir+'/e.txt', dir+'/f.txt', dir+'/g.txt']
     
-    escolha = int(input('1 - a.txt\n2 - b.txt\n3 - c.txt\n4 - d.txt\n5 - e.txt\n6 - f.txt\n7 - g.txt\n\nEscolha uma Gramatica: '))
+    clear()
+    print("Selecione Entre 1 até 9:\n")
+    print("1 - a.txt\n2 - b.txt\n3 - c.txt\n4 - d.txt\n5 - e.txt\n6 - f.txt\n7 - g.txt\n8 - h.txt\n9 - i.txt\n\n")
+    escolha = int(input('Escolha uma Gramatica: '))
+
+    if not (escolha in [i for i in range(1, 10)]):
+        print("Escolha Invalida")
+        exit()
+    
+    clear()
+
+    comentarios_sobre_gramaticas(escolha)
+    confirmar = input("Digite OK para Continuar ou qualquer coisa para finalizar: ")
+    if confirmar != 'OK':
+        clear()
+        exit()
+    elif confirmar == 'OK':
+        pass
+    
+    clear()
 
     gr = lerArquivo(gramatica[escolha-1])
 
